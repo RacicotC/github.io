@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .question {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .image {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleAnswer(id) {
+            const element = document.getElementById(id);
+            element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Table des matières -->
+    <h1>Table of Contents</h1>
+    <ul>
+        <li><a href="#section1">1. Line-of-Sight Communication</a></li>
+        <li><a href="#section2">2. Non-Line-of-Sight Communication</a></li>
+        <li><a href="#section3">3. Summary Table</a></li>
+    </ul>
+
+    <!-- Section 1 -->
+    <h2 id="section1">1. What is line-of-sight communication?</h2>
+    <p class="question" onclick="toggleAnswer('answer1')">Click to reveal the answer</p>
+    <p id="answer1" class="hidden">Line-of-sight communication is a strategy of data transfer between a sender and a receiver that requires an unobstructed path, free of physical barriers.</p>
+
+    <!-- Section 2 -->
+    <h2 id="section2">2. What is an example of non-line-of-sight communication?</h2>
+    <p class="question" onclick="toggleAnswer('answer2')">Click to reveal the answer</p>
+    <p id="answer2" class="hidden">Non line-of-sight communication examples include WiFi, cellular networks, and ultra wide-band (UWB).</p>
+
+    <!-- Tableau -->
+    <h2 id="section3">3. Summary Table</h2>
+    <table>
+        <tr>
+            <th>Type of Communication</th>
+            <th>Example</th>
+            <th>Characteristics</th>
+        </tr>
+        <tr>
+            <td>Line-of-Sight</td>
+            <td>Infrared, Laser</td>
+            <td>Requires clear path</td>
+        </tr>
+        <tr>
+            <td>Non-Line-of-Sight</td>
+            <td>WiFi, Cellular</td>
+            <td>Can pass through obstacles</td>
+        </tr>
+    </table>
+
+    <!-- Image -->
+    <div class="image">
+        <h2>4. Visual Example</h2>
+        <img src="https://via.placeholder.com/400x200" alt="Communication Example" width="400">
+        <p>Figure: Example of Line-of-Sight vs Non-Line-of-Sight Communication</p>
+    </div>
+
+    <!-- Lien internet -->
+    <h2>5. Learn More</h2>
+    <p>For more details, visit <a href="https://en.wikipedia.org/wiki/Line-of-sight_propagation" target="_blank">Line-of-Sight Propagation on Wikipedia</a>.</p>
+
+</body>
+</html>
